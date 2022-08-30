@@ -1,0 +1,44 @@
+
+.btn-me{
+    background-color: #30c8d6;
+    color: #fff;
+}
+.btn-me:hover{
+    background-color: #23a4b0;
+    color: #fff;
+}
+.navbar-brand.ps-3,
+#sidebarToggle.fas.fa-bars,
+#navbarDropdown i{
+    color: #f9fbfe;
+}
+.navbar-brand.ps-3:hover{
+    color: #fff;
+}
+.text-me{
+    color: #2b546a;
+}
+.bg-bk{
+    background-color: #f9fbfe;
+}
+.sb-topnav{
+    background-color: #5876a3;
+}
+.text-sidebar{
+    color: #a0c3f7;
+}
+.sb-sidenav-white{
+    background-color: #5876a3;
+}
+.nav-link{
+    color: #f9fbfe;
+}
+.nav-link:hover{
+    color: #f9fbfe;
+}
+.sb-sidenav-menu-heading{
+    color: #edf2fa;
+}
+.collapsed:active{
+    color: #edf2fa;
+}
