@@ -17,11 +17,15 @@ Progate inventory adalah sebuah project web aplication yang dibuat oleh para pro
 
 Untuk teman - teman yang mau berkontribusi di project inventory ini, silahkan clone projectnya ke repository local kalian masing masing:
 
-- **Lakukan cloning** ```git clone https://github.com/progate-nextlevel/inventory.git```
-- **install composer** ```composer install```
+- **Lakukan cloning** 
+```git clone https://github.com/progate-nextlevel/inventory.git```
+- **install composer** 
+```composer install```
 - **buat file** `.env` dengan cara `cp .env.example .env` pada cmd
-- **lakukan generate key dengan cara** ```php artisan key:generate```
-- **jalankan server nya** ```php artisan serve```
+- **lakukan generate key dengan cara** 
+```php artisan key:generate```
+- **jalankan server nya** 
+    ```php artisan serve```
 #
 
 # 
