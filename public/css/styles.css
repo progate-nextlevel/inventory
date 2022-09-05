@@ -3046,8 +3046,8 @@ textarea.form-control-lg {
 
 .btn-primary {
   color: #fff;
-  background-color: #0d6efd;
-  border-color: #0d6efd;
+  background-color: #209cee;
+  border-color: #209ceeea;
 }
 .btn-primary:hover {
   color: #fff;
@@ -3106,8 +3106,8 @@ textarea.form-control-lg {
 
 .btn-success {
   color: #fff;
-  background-color: #198754;
-  border-color: #198754;
+  background-color: #00d1b2;
+  border-color: #00d1b2;
 }
 .btn-success:hover {
   color: #fff;
@@ -3196,8 +3196,8 @@ textarea.form-control-lg {
 
 .btn-danger {
   color: #fff;
-  background-color: #dc3545;
-  border-color: #dc3545;
+  background-color: #ff3860;
+  border-color: #ff3860;
 }
 .btn-danger:hover {
   color: #fff;
@@ -3968,7 +3968,7 @@ textarea.form-control-lg {
   }
 }
 .nav-link:hover, .nav-link:focus {
-  color: #0a58ca;
+  color: #fafafa;
 }
 .nav-link.disabled {
   color: #6c757d;
@@ -4993,8 +4993,8 @@ textarea.form-control-lg {
 }
 
 .alert-danger {
-  color: #842029;
-  background-color: #f8d7da;
+  color: #fafafa;
+  background-color: #ff3860;
   border-color: #f5c2c7;
 }
 .alert-danger .alert-link {
@@ -11431,7 +11431,7 @@ body {
   color: rgba(255, 255, 255, 0.5);
 }
 .sb-topnav.navbar-light #sidebarToggle {
-  color: #212529;
+  color: #fafafa;
 }
 
 .sb-sidenav {

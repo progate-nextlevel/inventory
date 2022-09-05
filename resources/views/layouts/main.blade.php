@@ -9,8 +9,10 @@
     <meta name="author" content="" />
     <title>{{ $title }}</title>
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
-    <link href="{{ url('') }}/css/styles.css" rel="stylesheet" />
-    <link href="{{ url('') }}/css/me.css" rel="stylesheet" />
+    <link href="{{ url('') }}/css/styles.css?v=1.0" rel="stylesheet" />
+    <link href="{{ url('') }}/css/me.css?v=1.1" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    {{-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"> --}}
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
 </head>
 

@@ -42,3 +42,7 @@
 .collapsed:active{
     color: #edf2fa;
 }
+
+#btn-edit{
+    background-color: #00d1b2;
+}

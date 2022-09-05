@@ -17,7 +17,7 @@
                 <div class="collapse" id="datamaster" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                     <nav class="sb-sidenav-menu-nested nav">
                         <a class="nav-link" href="layout-static.html">Data Barang</a>
-                        <a class="nav-link" href="layout-sidenav-light.html">Supplier</a>
+                        <a class="nav-link" href="{{ route('supplier.index') }}">Supplier</a>
                         <a class="nav-link" href="layout-sidenav-light.html">Warehouses</a>
                         <a class="nav-link" href="layout-sidenav-light.html">Stock</a>
                     </nav>
@@ -31,7 +31,7 @@
                 <div class="collapse" id="input-master" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                     <nav class="sb-sidenav-menu-nested nav">
                         <a class="nav-link" href="#">Data Barang</a>
-                        <a class="nav-link" href="{{ url('/tambah_suplier') }}">Supplier</a>
+                        <a class="nav-link" href="{{ route('supplier.create') }}">Supplier</a>
                         <a class="nav-link" href="#">Warehouses</a>
                         <a class="nav-link" href="#">Stock</a>
                     </nav>

@@ -14,7 +14,7 @@ class Trucks extends Migration
     public function up()
     {
         Schema::create('trucks', function (Blueprint $table) {
-            $table->increments('id_truck');
+            $table->id('id_truck');
             $table->integer('id_warehouse');
             $table->text('driver_contact');
         });

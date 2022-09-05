@@ -14,7 +14,7 @@ class Racks extends Migration
     public function up()
     {
         Schema::create('racks', function (Blueprint $table) {
-            $table->increments('id_rack');
+            $table->id('id_rack');
             $table->integer('size');
         });
     }

@@ -14,7 +14,7 @@ class StockOpname extends Migration
     public function up()
     {
         Schema::create('stock_opname', function (Blueprint $table) {
-            $table->increments('id_opname');
+            $table->id('id_opname');
             $table->date('opname_date');
         });
     }

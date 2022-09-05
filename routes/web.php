@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\SuppliersController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,12 +18,14 @@ Route::get('/', function () {
     return view('welcome', ['title' => 'Progate Inventory']);
 });
 
-Route::get('/tambah_suplier', function () {
-    return view('input.suplier', [
-        'title' => 'Tambah Suplier'
-    ]);
-});
+// Route::get('/tambah_suplier', function () {
+//     return view('input.suplier', [
+//         'title' => 'Tambah Suplier'
+//     ]);
+// });
 
-Route::post('/save_suplier', function () {
-    return view('welcome', ['tes' => 'arip budiman']);
-});
+// Route::post('/save_suplier', function () {
+//     return view('welcome', ['tes' => 'arip budiman']);
+// });
+
+Route::resource('supplier', SuppliersController::class);
