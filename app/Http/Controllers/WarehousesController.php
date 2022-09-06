@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Suppliers;
+use App\Models\Warehouses;
 
-class SuppliersController extends Controller
+class WarehousesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,10 +14,10 @@ class SuppliersController extends Controller
      */
     public function index()
     {
-        $supplier = suppliers::all();
-        return view('data.supplier.index', [
-            'title' => 'Supplier',
-        ],  compact('supplier'));
+        $warehouse = warehouses::all();
+        return view('data.warehouse.index', [
+            'title' => 'Warehouses',
+        ],  compact('warehouse'));
     }
 
     /**
@@ -27,8 +27,8 @@ class SuppliersController extends Controller
      */
     public function create()
     {
-        return view('input.supplier.supplier', [
-            'title' => 'Input Supplier',
+        return view('input.warehouse.warehouse',[
+            'title'=>'Tambah Warehouse'
         ]);
     }
 
@@ -41,12 +41,10 @@ class SuppliersController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'company_name' => 'required',
-            'address' => 'required',
-            'contact' => 'required|numeric',
+            'address' => 'required'
         ]);
-        Suppliers::create($request->all());
-        return redirect()->route('supplier.index')->with('success', 'Data Berhasil ditambahkan');
+        Warehouses::create($request->all());
+        return redirect()->route('warehouse.index')->with('success', 'Data Berhasil ditambahkan');
     }
 
     /**
@@ -57,7 +55,7 @@ class SuppliersController extends Controller
      */
     public function show($id)
     {
-        //
+       //
     }
 
     /**
@@ -66,9 +64,11 @@ class SuppliersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(suppliers $supplier)
+    public function edit(warehouses $warehouse)
     {
-        return view('input.supplier.edit',['title'=>'Edit Supplier'],compact('supplier'));
+        return view('input.warehouse.edit',[
+            'title'=>'Edit Warehouses'
+        ],compact('warehouse'));
     }
 
     /**
@@ -78,15 +78,13 @@ class SuppliersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Suppliers $supplier)
+    public function update(Request $request, warehouses $warehouse)
     {
         $request->validate([
-            'company_name' => 'required',
-            'address' => 'required',
-            'contact' => 'required|numeric',
+            'address'=>'required'
         ]);
-        $supplier->update($request->all());
-        return redirect()->route('supplier.index')->with('success', 'Data Berhasil diupdate');
+        $warehouse->update($request->all());
+        return redirect()->route('warehouse.index')->with('success', 'Data Berhasil diupdate');
     }
 
     /**
@@ -95,10 +93,10 @@ class SuppliersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(suppliers $supplier)
+    public function destroy(Warehouses $warehouse)
     {
-        suppliers::destroy($supplier->id_supplier);
-        // $supplier->delete();   cara ini atau cara di atas
-        return redirect()->route('supplier.index')->with('delete','Data berhasil didelete');
+        Warehouses::destroy($warehouse->id_warehouse);
+
+        return redirect()->route('warehouse.index')->with('delete','Data berhasil didelete');
     }
 }

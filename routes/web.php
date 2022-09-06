@@ -1,7 +1,11 @@
 <?php
 
-use App\Http\Controllers\SuppliersController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RacksController;
+use App\Http\Controllers\StatusesController;
+use App\Http\Controllers\SuppliersController;
+use App\Http\Controllers\WarehousesController;
+use App\Http\Controllers\ItemsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,3 +33,7 @@ Route::get('/', function () {
 // });
 
 Route::resource('supplier', SuppliersController::class);
+Route::resource('warehouse', WarehousesController::class);
+Route::resource('rack', RacksController::class);
+Route::resource('status',StatusesController::class);
+Route::resource('item',ItemsController::class);

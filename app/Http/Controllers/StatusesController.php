@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Suppliers;
+use App\Models\Statuses;
 
-class SuppliersController extends Controller
+class StatusesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,10 +14,10 @@ class SuppliersController extends Controller
      */
     public function index()
     {
-        $supplier = suppliers::all();
-        return view('data.supplier.index', [
-            'title' => 'Supplier',
-        ],  compact('supplier'));
+        $status = Statuses::all();
+        return view('data.status.index',[
+            'title'=>'Status'
+        ],compact('status'));
     }
 
     /**
@@ -27,9 +27,7 @@ class SuppliersController extends Controller
      */
     public function create()
     {
-        return view('input.supplier.supplier', [
-            'title' => 'Input Supplier',
-        ]);
+        return view('input.status.status',['title'=>'Tambah status']);
     }
 
     /**
@@ -41,12 +39,10 @@ class SuppliersController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'company_name' => 'required',
-            'address' => 'required',
-            'contact' => 'required|numeric',
+            'status'=>'required'
         ]);
-        Suppliers::create($request->all());
-        return redirect()->route('supplier.index')->with('success', 'Data Berhasil ditambahkan');
+        Statuses::create($request->all());
+        return redirect()->route('status.index')->with('success','Data berhasil ditambahkan');
     }
 
     /**
@@ -66,9 +62,11 @@ class SuppliersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(suppliers $supplier)
+    public function edit(Statuses $status)
     {
-        return view('input.supplier.edit',['title'=>'Edit Supplier'],compact('supplier'));
+        return view('input.status.edit',[
+            'title'=>'Edit status'
+        ],compact('status'));
     }
 
     /**
@@ -78,15 +76,13 @@ class SuppliersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Suppliers $supplier)
+    public function update(Request $request, Statuses $status)
     {
         $request->validate([
-            'company_name' => 'required',
-            'address' => 'required',
-            'contact' => 'required|numeric',
+            'status'=>'required'
         ]);
-        $supplier->update($request->all());
-        return redirect()->route('supplier.index')->with('success', 'Data Berhasil diupdate');
+        $status->update($request->all());
+        return redirect()->route('status.index')->with('success','Data berhasil diupdate');
     }
 
     /**
@@ -95,10 +91,9 @@ class SuppliersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(suppliers $supplier)
+    public function destroy(Statuses $status)
     {
-        suppliers::destroy($supplier->id_supplier);
-        // $supplier->delete();   cara ini atau cara di atas
-        return redirect()->route('supplier.index')->with('delete','Data berhasil didelete');
+        Statuses::destroy($status->id_status);
+        return redirect()->route('status.index')->with('delete','Data berhasil didelete');
     }
 }

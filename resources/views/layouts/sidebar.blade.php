@@ -18,7 +18,10 @@
                     <nav class="sb-sidenav-menu-nested nav">
                         <a class="nav-link" href="layout-static.html">Data Barang</a>
                         <a class="nav-link" href="{{ route('supplier.index') }}">Supplier</a>
-                        <a class="nav-link" href="layout-sidenav-light.html">Warehouses</a>
+                        <a class="nav-link" href="{{ route('warehouse.index') }}">Warehouses</a>
+                        <a class="nav-link" href="{{ route('rack.index') }}">Racks</a>
+                        <a class="nav-link" href="{{ route('status.index') }}">Statuses</a>
+                        <a class="nav-link" href="{{ route('item.index') }}">Items</a>
                         <a class="nav-link" href="layout-sidenav-light.html">Stock</a>
                     </nav>
                 </div>
@@ -32,7 +35,10 @@
                     <nav class="sb-sidenav-menu-nested nav">
                         <a class="nav-link" href="#">Data Barang</a>
                         <a class="nav-link" href="{{ route('supplier.create') }}">Supplier</a>
-                        <a class="nav-link" href="#">Warehouses</a>
+                        <a class="nav-link" href="{{ route('warehouse.create') }}">Warehouses</a>
+                        <a class="nav-link" href="{{ route('rack.create') }}">Racks</a>
+                        <a class="nav-link" href="{{ route('status.create') }}">Statuses</a>
+                        <a class="nav-link" href="{{ route('item.create') }}">Items</a>
                         <a class="nav-link" href="#">Stock</a>
                     </nav>
                 </div>
